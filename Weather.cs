@@ -8,5 +8,18 @@ namespace Lemonade_Stand_Proj
 {
     class Weather
     {
+        //member variables
+        public double outsideTemps;
+        public List<string> weatherConditions;
+        //constructor
+        public Weather()
+        {
+            weatherConditions = new List<string>() { "Sunny", "Cloudy", "Hazy", "Rainy", "Windy" };
+        }
+        //member methods
+        public void ConditionOfWeather()
+        {
+
+        }
     }
 }
