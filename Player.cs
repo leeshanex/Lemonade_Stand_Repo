@@ -8,5 +8,18 @@ namespace Lemonade_Stand_Proj
 {
     class Player
     {
+        //member variables (Has A)
+        public Inventory inventory;
+        public Wallet wallet;
+
+        //constructor
+        public Player()
+        {
+            inventory = new Inventory();
+            wallet = new Wallet();
+        }
+
+        //member methods (Can Do)
+
     }
 }

@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand_Proj
 {
-    class Item
+    abstract class Item
     {
+        public string name;
+        static Item()
+        {
+
+        }
     }
 }

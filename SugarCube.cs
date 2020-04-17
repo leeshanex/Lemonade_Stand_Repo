@@ -8,5 +8,9 @@ namespace Lemonade_Stand_Proj
 {
     class SugarCube
     {
+        public SugarCube()
+        {
+            name = "sugar cube";
+        }
     }
 }
