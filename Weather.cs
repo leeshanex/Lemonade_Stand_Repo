@@ -11,6 +11,7 @@ namespace Lemonade_Stand_Proj
         //member variables
         public double outsideTemps;
         public List<string> weatherConditions;
+        public string conditionChosen;
         //constructor
         public Weather()
         {
@@ -22,26 +23,9 @@ namespace Lemonade_Stand_Proj
             Random r = new Random();
             int weatherCondition = r.Next(weatherConditions.Count);
 
-            if (weatherCondition == 0)
-            {
-                Console.WriteLine(weatherCondition);
-            }
-            else if (weatherCondition == 1)
-            {
-                Console.WriteLine(weatherCondition);
-            }
-            else if (weatherCondition == 2)
-            {
-                Console.WriteLine(weatherCondition);
-            }   
-            else if (weatherCondition == 3)
-            {
-                Console.WriteLine(weatherCondition);
-            }
-            else if (weatherCondition == 4)
-            {
-                Console.WriteLine(weatherCondition);
-            }
+                conditionChosen = weatherConditions[weatherCondition];
+                Console.WriteLine(conditionChosen);
+            
             Console.ReadLine();
         }
     }
