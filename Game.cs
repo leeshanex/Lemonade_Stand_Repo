@@ -20,7 +20,10 @@ namespace Lemonade_Stand_Proj
         //member methods
         public void RunGame()
         {
+
             weather.ConditionOfWeather();
+            weather.WeatherTemperature();
+
         }
     }
 }

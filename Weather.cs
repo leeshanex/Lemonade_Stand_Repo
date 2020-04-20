@@ -24,7 +24,6 @@ namespace Lemonade_Stand_Proj
             int weatherCondition = r.Next(weatherConditions.Count);
             condition = weatherConditions[weatherCondition];
             Console.WriteLine(condition);
-            Console.ReadLine();
         }
         public void WeatherTemperature()
         {
@@ -33,24 +32,30 @@ namespace Lemonade_Stand_Proj
             if (condition == "Hot")
             {
                 temperature = r.Next(90, 100);
+                Console.WriteLine(temperature + "°F");
             }
             else if (condition == "Hazy")
             {
                 temperature = r.Next(80, 89);
+                Console.WriteLine(temperature + "°F");
             }
             else if (condition == "Sunny")
             {
                 temperature = r.Next(70, 79);
+                Console.WriteLine(temperature + "°F");
             }
             else if (condition == "Cloudy")
             {
                 temperature = r.Next(60, 69);
+                Console.WriteLine(temperature + "°F");
             }
             else if (condition == "Rainy")
             {
                 temperature = r.Next(50, 59);
+                Console.WriteLine(temperature + "°F");
             }
-
+            Console.ReadLine();
         }
+
     }
 }
