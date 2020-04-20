@@ -8,5 +8,13 @@ namespace Lemonade_Stand_Proj
 {
     class Pitcher
     {
+        //member variables
+        public int cupsLeftInPitcher;
+        //constructor
+        public Pitcher()
+        {
+
+        }
+        //member methods
     }
 }
