@@ -9,9 +9,9 @@ namespace Lemonade_Stand_Proj
     class Weather
     {
         //member variables
-        public double outsideTemps;
+        public int temperature;
         public List<string> weatherConditions;
-        public string conditionChosen;
+        public string condition;
         //constructor
         public Weather()
         {
@@ -23,10 +23,14 @@ namespace Lemonade_Stand_Proj
             Random r = new Random();
             int weatherCondition = r.Next(weatherConditions.Count);
 
-                conditionChosen = weatherConditions[weatherCondition];
-                Console.WriteLine(conditionChosen);
+                condition = weatherConditions[weatherCondition];
+                Console.WriteLine(condition);
             
             Console.ReadLine();
+        }
+        public void WeatherTemperature()
+        {
+
         }
     }
 }
