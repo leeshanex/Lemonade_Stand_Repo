@@ -17,8 +17,10 @@ namespace Lemonade_Stand_Proj
             weatherConditions = new List<string>() { "Sunny", "Cloudy", "Hazy", "Rainy", "Windy" };
         }
         //member methods
-        public void ConditionOfWeather()
+        public void ConditionOfWeather(int weatherCondition)
         {
+            Random r = new Random();
+            weatherCondition = r.Next(weatherConditions.Count);
 
         }
     }
