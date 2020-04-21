@@ -11,6 +11,8 @@ namespace Lemonade_Stand_Proj
         //member variables (Has A)
         public Inventory inventory;
         public Wallet wallet;
+        public string name;
+        
 
         //constructor
         public Player()
