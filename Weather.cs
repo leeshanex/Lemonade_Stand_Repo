@@ -9,9 +9,9 @@ namespace Lemonade_Stand_Proj
     class Weather
     {
         //member variables
-        public int temperature;
-        public List<string> weatherConditions;
-        public string condition;
+        int temperature;
+        List<string> weatherConditions;
+        string condition;
         //constructor
         public Weather()
         {

@@ -11,7 +11,10 @@ namespace Lemonade_Stand_Proj
         //member variables
 
         //constructor
+        public Customer()
+        {
 
+        }
         //member methods
     }
 }
