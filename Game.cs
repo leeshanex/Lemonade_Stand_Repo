@@ -10,7 +10,7 @@ namespace Lemonade_Stand_Proj
     {
         //member variables
         Weather weather;
-        UserInterface userInterface;
+        Store store;
         private Player player;
         private List<Day> days;
         private int currentDay;
@@ -18,7 +18,8 @@ namespace Lemonade_Stand_Proj
         public Game()
         {
             weather = new Weather();
-            userInterface = new UserInterface();
+            store = new Store();
+           
         }
 
         //member methods
