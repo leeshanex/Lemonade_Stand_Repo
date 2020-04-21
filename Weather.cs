@@ -23,7 +23,7 @@ namespace Lemonade_Stand_Proj
             Random r = new Random();
             int weatherCondition = r.Next(weatherConditions.Count);
             condition = weatherConditions[weatherCondition];
-            Console.WriteLine(condition);
+            Console.WriteLine("Condition: " + condition);
         }
         public void WeatherTemperature()
         {
@@ -52,7 +52,7 @@ namespace Lemonade_Stand_Proj
             else if (condition == "Rainy")
             {
                 temperature = r.Next(50, 59);
-                Console.WriteLine(temperature + "°F");
+                Console.WriteLine("Temp: " + temperature + "°F");
             }
             Console.ReadLine();
         }
