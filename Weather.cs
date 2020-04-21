@@ -32,22 +32,22 @@ namespace Lemonade_Stand_Proj
             if (condition == "Hot")
             {
                 temperature = r.Next(90, 100);
-                Console.WriteLine(temperature + "°F");
+                Console.WriteLine("Temp: " + temperature + "°F");
             }
             else if (condition == "Hazy")
             {
                 temperature = r.Next(80, 89);
-                Console.WriteLine(temperature + "°F");
+                Console.WriteLine("Temp: " + temperature + "°F");
             }
             else if (condition == "Sunny")
             {
                 temperature = r.Next(70, 79);
-                Console.WriteLine(temperature + "°F");
+                Console.WriteLine("Temp: " + temperature + "°F");
             }
             else if (condition == "Cloudy")
             {
                 temperature = r.Next(60, 69);
-                Console.WriteLine(temperature + "°F");
+                Console.WriteLine("Temp: " + temperature + "°F");
             }
             else if (condition == "Rainy")
             {
