@@ -19,11 +19,16 @@ namespace Lemonade_Stand_Proj
             customers = new List<Customer> { };
         }
         //member methods
-        public void DayForecast()
+        public void DisplayDayWeatherForecast()
         {
             Console.WriteLine("7-day Weather Forecast");
-                DateTime now = DateTime.Now;
-            Console.WriteLine("Day 1:" + now);
+            
+            for (int i = 1; i < 8; i++)
+            {
+                Console.WriteLine("Day " + i + ":");
+                weather.ConditionOfWeather();
+                weather.WeatherTemperature();
+            }
         }
 
     }

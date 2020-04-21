@@ -38,11 +38,8 @@ namespace Lemonade_Stand_Proj
         public void RunGame()
         {
             DisplayRules();
-            day.DayForecast();
-            weather.ConditionOfWeather();
-            weather.WeatherTemperature();
-            
-
+            day.DisplayDayWeatherForecast();
+            Console.ReadLine();
         }
     }
 }
