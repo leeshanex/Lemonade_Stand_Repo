@@ -15,8 +15,16 @@ namespace Lemonade_Stand_Proj
         //constructor
         public Day()
         {
-
+            weather = new Weather();
+            customers = new List<Customer> { };
         }
         //member methods
+        public void DayForecast()
+        {
+            Console.WriteLine("7-day Weather Forecast");
+                DateTime now = DateTime.Now;
+            Console.WriteLine("Day 1:" + now);
+        }
+
     }
 }

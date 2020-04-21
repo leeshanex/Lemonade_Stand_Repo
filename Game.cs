@@ -11,6 +11,7 @@ namespace Lemonade_Stand_Proj
         //member variables
         Weather weather;
         Store store;
+        Day day;
         private Player player;
         private List<Day> days;
         private int currentDay;
@@ -19,7 +20,7 @@ namespace Lemonade_Stand_Proj
         {
             weather = new Weather();
             store = new Store();
-           
+            day = new Day();
         }
 
         //member methods
@@ -37,8 +38,10 @@ namespace Lemonade_Stand_Proj
         public void RunGame()
         {
             DisplayRules();
+            day.DayForecast();
             weather.ConditionOfWeather();
             weather.WeatherTemperature();
+            
 
         }
     }
