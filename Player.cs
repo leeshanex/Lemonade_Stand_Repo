@@ -12,6 +12,8 @@ namespace Lemonade_Stand_Proj
         public Inventory inventory;
         public Wallet wallet;
         public string name;
+        public Recipe recipe;
+        public Pitcher pitcher;
         
 
         //constructor
@@ -22,6 +24,9 @@ namespace Lemonade_Stand_Proj
         }
 
         //member methods (Can Do)
-
+        public void PurchasingItems()
+        {
+            //inventory.AddCupsToInventory
+        }
     }
 }

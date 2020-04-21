@@ -21,6 +21,8 @@ namespace Lemonade_Stand_Proj
             weather = new Weather();
             store = new Store();
             day = new Day();
+            player = new Player();
+            days = new List<Day>();
         }
 
         //member methods
@@ -38,8 +40,30 @@ namespace Lemonade_Stand_Proj
         public void RunGame()
         {
             DisplayRules();
-            day.DisplayDayWeatherForecast();
-            Console.ReadLine();
+            //day.DisplaySevenDayForecast();
+            AddDaysToList();
+            SendPlayerToStore();
+
+           
+        }
+        public void StoreMenu()
+        {
+
+        }
+        public void SendPlayerToStore()
+        {
+            store.SellCups(player);
+            store.SellLemons(player);
+            store.SellSugarCubes(player);
+            store.SellIceCubes(player);
+        }
+        public void AddDaysToList()
+        {
+            for (int i = 1; i < 8; i++)
+            {
+                days.Add(new Day());
+                Console.WriteLine();
+            }
         }
     }
 }

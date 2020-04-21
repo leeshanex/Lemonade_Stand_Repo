@@ -54,7 +54,7 @@ namespace Lemonade_Stand_Proj
                 temperature = r.Next(50, 59);
                 Console.WriteLine("Temp: " + temperature + "°F");
             }
-            Console.ReadLine();
+            
         }
 
     }

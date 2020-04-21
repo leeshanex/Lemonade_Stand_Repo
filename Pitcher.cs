@@ -13,8 +13,9 @@ namespace Lemonade_Stand_Proj
         //constructor
         public Pitcher()
         {
-
+            cupsLeftInPitcher = 12;
         }
         //member methods
+
     }
 }
