@@ -48,7 +48,7 @@ namespace Lemonade_Stand_Proj
         }
         public void StoreMenu()
         {
-
+            Console.WriteLine();
         }
         public void SendPlayerToStore()
         {
