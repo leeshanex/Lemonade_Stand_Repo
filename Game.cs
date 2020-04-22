@@ -11,19 +11,18 @@ namespace Lemonade_Stand_Proj
         //member variables
         Weather weather;
         Store store;
-        Day day;
+        //Day day;
         Wallet wallet;
         Inventory inventory;
         private Player player;
         private List<Day> days;
         private int currentDay;
-        private int numberOfDays;
         //constructor
         public Game()
         {
             weather = new Weather();
             store = new Store();
-            day = new Day();
+            //day = new Day();
             player = new Player();
             days = new List<Day>();
             wallet = new Wallet();
@@ -48,10 +47,8 @@ namespace Lemonade_Stand_Proj
             DisplayRules();
             StoreMenu();
             //while() loop for each new day until day 7 and then calculate profit/loss
-            DisplayMoney();
-            AddDaysToList(currentDay, numberOfDays);
+            AddDaysToList();
             SendPlayerToStore();
-            DisplayInventory();
             Console.ReadLine();
 
 
@@ -74,27 +71,19 @@ namespace Lemonade_Stand_Proj
             store.SellSugarCubes(player);
             store.SellIceCubes(player);
         }
-       public void DisplayInventory()
+
+        public void AddDaysToList()
         {
-            Console.WriteLine(inventory.lemons);
-        }
-        public void AddDaysToList(int currentDay, int numberOfDays)
-        {
-            currentDay = 1;
-            numberOfDays = 7;
-            for (int i = currentDay; i <= numberOfDays; i++)
+            //days.Add(new Day());
+            Console.WriteLine();
+            int numberOfDays = 7;
+            for (int i = 1; i <= numberOfDays; i++)
             {
-                Day day = new Day();
+                Day day = new Day("Day " + i );
                 days.Add(day);
                 Console.WriteLine("Day: " + (i) + " of " + (numberOfDays));
-                weather.ConditionOfWeather();
-                weather.WeatherTemperature();
                 Console.ReadLine();
             }
-        }
-        public void DisplayMoney()
-        {
-            Console.WriteLine("Money: $ " + wallet.Money);
         }
     }
 }

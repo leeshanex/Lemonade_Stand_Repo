@@ -16,6 +16,9 @@ namespace Lemonade_Stand_Proj
         public Weather()
         {
             weatherConditions = new List<string>() { "Sunny", "Cloudy", "Hazy", "Rainy", "Hot" };
+            ConditionOfWeather();
+            WeatherTemperature();
+        
         }
         //member methods
         public void ConditionOfWeather()

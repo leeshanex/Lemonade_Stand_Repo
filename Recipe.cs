@@ -20,5 +20,6 @@ namespace Lemonade_Stand_Proj
         }
         
         //member methods
+        //default recipe ....
     }
 }
