@@ -21,7 +21,7 @@ namespace Lemonade_Stand_Proj
             store = new Store();
             player = new Player();
             days = new List<Day>();
-            currentDay = days.Count;
+            currentDay = days.Count + 1;
             numberOfDays = 7;
         }
 
@@ -72,11 +72,11 @@ namespace Lemonade_Stand_Proj
 
         public void AddDaysToList()
         {
-            for (int i = currentDay + 1; i <= numberOfDays; i++)
-            {
-                Day day = new Day("Day: " + i + " of " + numberOfDays);
+            //for (int i = currentDay + 1; i <= numberOfDays; i++)
+            //{
+                Day day = new Day("Day: " + currentDay++ + " of " + numberOfDays);
                 days.Add(day);
-            }
+            //}
            
         }
         public void AdjustRecipe()

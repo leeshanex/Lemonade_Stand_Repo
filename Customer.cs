@@ -11,12 +11,14 @@ namespace Lemonade_Stand_Proj
         //member variables
         private List<string> names;
         public string name;
+   
         //constructor
         public Customer()
         {
-            names = new List<string>();
+            names = new List<string>() { "a", "b", "c", "d", "e", "f", "g", "h" };
         }
         //member methods
-
+     
+       
     }
 }

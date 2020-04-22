@@ -21,5 +21,9 @@ namespace Lemonade_Stand_Proj
             customers = new List<Customer> { };
         }
         //member methods
+        public void ChanceOfBuying()
+        {
+
+        }
     }
 }

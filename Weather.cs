@@ -12,12 +12,12 @@ namespace Lemonade_Stand_Proj
         public int temperature;
         private List<string> weatherConditions;
         public string condition;
-        Random r;
+        Random random;
         //constructor
         public Weather()
         {
             weatherConditions = new List<string>() { "Sunny", "Cloudy", "Hazy", "Rainy", "Hot" };
-            r = new Random();
+            random = new Random();
             ConditionOfWeather();
             WeatherTemperature();
         
@@ -25,7 +25,7 @@ namespace Lemonade_Stand_Proj
         //member methods
         public void ConditionOfWeather()
         {
-            int weatherCondition = r.Next(weatherConditions.Count);
+            int weatherCondition = random.Next(weatherConditions.Count);
             condition = weatherConditions[weatherCondition];
             Console.WriteLine("Condition: " + condition);
         }
@@ -33,27 +33,27 @@ namespace Lemonade_Stand_Proj
         {
             if (condition == "Hot")
             {
-                temperature = r.Next(90, 100);
+                temperature = random.Next(90, 100);
                 Console.WriteLine("Temp: " + temperature + "°F");
             }
             else if (condition == "Hazy")
             {
-                temperature = r.Next(80, 89);
+                temperature = random.Next(80, 89);
                 Console.WriteLine("Temp: " + temperature + "°F");
             }
             else if (condition == "Sunny")
             {
-                temperature = r.Next(70, 79);
+                temperature = random.Next(70, 79);
                 Console.WriteLine("Temp: " + temperature + "°F");
             }
             else if (condition == "Cloudy")
             {
-                temperature = r.Next(60, 69);
+                temperature = random.Next(60, 69);
                 Console.WriteLine("Temp: " + temperature + "°F");
             }
             else if (condition == "Rainy")
             {
-                temperature = r.Next(50, 59);
+                temperature = random.Next(50, 59);
                 Console.WriteLine("Temp: " + temperature + "°F");
             }
             
