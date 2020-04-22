@@ -12,10 +12,12 @@ namespace Lemonade_Stand_Proj
         public int temperature;
         private List<string> weatherConditions;
         public string condition;
+        Random r;
         //constructor
         public Weather()
         {
             weatherConditions = new List<string>() { "Sunny", "Cloudy", "Hazy", "Rainy", "Hot" };
+            r = new Random();
             ConditionOfWeather();
             WeatherTemperature();
         
@@ -23,15 +25,12 @@ namespace Lemonade_Stand_Proj
         //member methods
         public void ConditionOfWeather()
         {
-            Random r = new Random();
             int weatherCondition = r.Next(weatherConditions.Count);
             condition = weatherConditions[weatherCondition];
             Console.WriteLine("Condition: " + condition);
         }
         public void WeatherTemperature()
         {
-            Random r = new Random();
-
             if (condition == "Hot")
             {
                 temperature = r.Next(90, 100);
