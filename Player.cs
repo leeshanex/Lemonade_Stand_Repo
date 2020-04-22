@@ -21,8 +21,18 @@ namespace Lemonade_Stand_Proj
         {
             inventory = new Inventory();
             wallet = new Wallet();
+            recipe = new Recipe();
+            pitcher = new Pitcher();
         }
 
         //member methods (Can Do)
+        public void MakeLemonade()
+        {
+
+        }
+        public void PurchaseIngredients()
+        {
+
+        }
     }
 }

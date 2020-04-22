@@ -17,9 +17,6 @@ namespace Lemonade_Stand_Proj
             names = new List<string>() { };
         }
         //member methods
-        public void PurchasingLemonade()
-        {
 
-        }
     }
 }

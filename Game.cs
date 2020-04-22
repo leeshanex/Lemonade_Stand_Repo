@@ -15,6 +15,7 @@ namespace Lemonade_Stand_Proj
         private Player player;
         private List<Day> days;
         private int currentDay;
+        private int numberOfDays;
         //constructor
         public Game()
         {
@@ -41,7 +42,7 @@ namespace Lemonade_Stand_Proj
         {
             DisplayRules();
             //day.DisplaySevenDayForecast();
-            AddDaysToList();
+            AddDaysToList(currentDay, numberOfDays);
             SendPlayerToStore();
 
            
@@ -57,12 +58,20 @@ namespace Lemonade_Stand_Proj
             store.SellSugarCubes(player);
             store.SellIceCubes(player);
         }
-        public void AddDaysToList()
+
+       
+        public void AddDaysToList(int currentDay, int numberOfDays)
         {
-            for (int i = 1; i < 8; i++)
+            currentDay = 1;
+            numberOfDays = 8;
+            for (int i = currentDay; i < numberOfDays; i++)
             {
-                days.Add(currentDay);
-                Console.WriteLine();
+                Day day = new Day();
+                days.Add(day);
+                Console.WriteLine("Day " + (i) + " of " + (numberOfDays));
+                weather.ConditionOfWeather();
+                weather.WeatherTemperature();
+                Console.ReadLine();
             }
         }
     }

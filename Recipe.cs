@@ -16,7 +16,7 @@ namespace Lemonade_Stand_Proj
         //constructor
         public Recipe()
         {
-
+            //amountOfLemons = 
         }
         
         //member methods
