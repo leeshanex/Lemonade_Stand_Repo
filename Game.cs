@@ -31,7 +31,7 @@ namespace Lemonade_Stand_Proj
             DisplayRules();
             StoreMenu();
             //while() loop for each new day until day 7 and calculate profit/loss for each day
-            while (days.Count < 7)
+            while (days.Count < numberOfDays)
             {
                 
                 AddDaysToList();
@@ -72,12 +72,8 @@ namespace Lemonade_Stand_Proj
 
         public void AddDaysToList()
         {
-            //for (int i = currentDay + 1; i <= numberOfDays; i++)
-            //{
                 Day day = new Day("Day: " + currentDay++ + " of " + numberOfDays);
                 days.Add(day);
-            //}
-           
         }
         public void AdjustRecipe()
         {
