@@ -21,9 +21,8 @@ namespace Lemonade_Stand_Proj
             store = new Store();
             player = new Player();
             days = new List<Day>();
-            
-            //numberOfDays = 7;
-            //currentDay = days.Count;
+            currentDay = days.Count;
+            numberOfDays = 7;
         }
 
         //member methods
@@ -34,7 +33,7 @@ namespace Lemonade_Stand_Proj
             //while() loop for each new day until day 7 and calculate profit/loss for each day
             while (days.Count < 7)
             {
-                //CountTheDaysOf();
+                
                 AddDaysToList();
                 SendPlayerToStore();
             }
@@ -73,20 +72,16 @@ namespace Lemonade_Stand_Proj
 
         public void AddDaysToList()
         {
-            Day day = new Day();
+            for (int i = currentDay + 1; i <= numberOfDays; i++)
+            {
+                Day day = new Day("Day: " + i + " of " + numberOfDays);
                 days.Add(day);
-            
+            }
+           
         }
-        //public void CountTheDaysOf()
-        //{
-        //    int numberOfDays = 7;
-        //    for (int i = currentDay + 1; i <= numberOfDays; i++)
-        //    {
-        //        if(currentDay < 7)
-        //        {
-        //            Console.WriteLine("Day: " + i + " of " + numberOfDays);
-        //        }
-        //    }
-        //}
+        public void AdjustRecipe()
+        {
+
+        }
     }
 }
