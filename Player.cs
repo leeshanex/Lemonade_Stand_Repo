@@ -27,5 +27,9 @@ namespace Lemonade_Stand_Proj
         }
 
         //member methods (Can Do)
+        public void DisplayInventory()
+        {
+            Console.WriteLine(inventory);
+        }
     }
 }

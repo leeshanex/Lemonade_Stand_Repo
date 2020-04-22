@@ -36,6 +36,7 @@ namespace Lemonade_Stand_Proj
                 AddDaysToList();
                 player.wallet.DisplayAmount();
                 SendPlayerToStore();
+                player.DisplayInventory();
             }
             PlayerBankrupts();
            
@@ -72,7 +73,6 @@ namespace Lemonade_Stand_Proj
             store.SellSugarCubes(player);
             player.wallet.DisplayAmountLeft();
             store.SellIceCubes(player);
-            player.wallet.DisplayAmountLeft();
         }
 
         public void AddDaysToList()
