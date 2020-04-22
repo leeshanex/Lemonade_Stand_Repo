@@ -11,12 +11,11 @@ namespace Lemonade_Stand_Proj
         //member variables
         public Weather weather;
         public List<Customer> customers;
-        public string dayname;
+      
 
         //constructor
-        public Day(string dayname)
+        public Day()
         {
-            this.dayname = dayname;
             weather = new Weather();
             customers = new List<Customer> { };
         }
