@@ -37,11 +37,12 @@ namespace Lemonade_Stand_Proj
             Console.WriteLine("~> Lastly, set your price and sell you lemonade at the stand.");
             Console.WriteLine("~> Try changing the price based on the weather conditions as well.");
             Console.WriteLine("~> At the end of the game, you'll see how much money you made.");
+            Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
         }
         public void RunGame()
         {
             DisplayRules();
-            //day.DisplaySevenDayForecast();
+            StoreMenu();
             AddDaysToList(currentDay, numberOfDays);
             SendPlayerToStore();
 
@@ -49,7 +50,13 @@ namespace Lemonade_Stand_Proj
         }
         public void StoreMenu()
         {
-            Console.WriteLine();
+            Console.WriteLine(" ____________________________");
+            Console.WriteLine("|_________Store_Menu_________|");
+            Console.WriteLine("|Lemons = $0.50 each         |");
+            Console.WriteLine("|Sugar = $0.10 per sugar cube|");
+            Console.WriteLine("|Ice = $0.01 per ice cube    |");
+            Console.WriteLine("|Cup = $0.25 each            |");
+            Console.WriteLine("|____________________________|");
         }
         public void SendPlayerToStore()
         {
@@ -63,8 +70,8 @@ namespace Lemonade_Stand_Proj
         public void AddDaysToList(int currentDay, int numberOfDays)
         {
             currentDay = 1;
-            numberOfDays = 8;
-            for (int i = currentDay; i < numberOfDays; i++)
+            numberOfDays = 7;
+            for (int i = currentDay; i <= numberOfDays; i++)
             {
                 Day day = new Day();
                 days.Add(day);

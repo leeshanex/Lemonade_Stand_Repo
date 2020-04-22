@@ -19,22 +19,6 @@ namespace Lemonade_Stand_Proj
             customers = new List<Customer> { };
         }
         //member methods
-        //public void DisplaySevenDayForecast()
-        //{
-        //    Console.WriteLine("7-day Weather Forecast");
-
-        //    for (int i = 1; i < 8; i++)
-        //    {
-        //        Console.WriteLine("Day " + i + ":");
-        //        weather.ConditionOfWeather();
-        //        weather.WeatherTemperature();
-        //        Console.ReadLine();
-        //    }
-        //}
-        //public void DisplayActualWeather()
-        //{
-
-        //}
 
     }
 }
