@@ -61,7 +61,7 @@ namespace Lemonade_Stand_Proj
         {
             for (int i = 1; i < 8; i++)
             {
-                days.Add(new Day());
+                days.Add(currentDay);
                 Console.WriteLine();
             }
         }
