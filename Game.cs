@@ -12,6 +12,7 @@ namespace Lemonade_Stand_Proj
         Weather weather;
         Store store;
         Day day;
+        Wallet wallet;
         private Player player;
         private List<Day> days;
         private int currentDay;
@@ -24,6 +25,7 @@ namespace Lemonade_Stand_Proj
             day = new Day();
             player = new Player();
             days = new List<Day>();
+            wallet = new Wallet();
         }
 
         //member methods
@@ -43,6 +45,7 @@ namespace Lemonade_Stand_Proj
         {
             DisplayRules();
             StoreMenu();
+            DisplayMoney();
             AddDaysToList(currentDay, numberOfDays);
             SendPlayerToStore();
 
@@ -75,11 +78,15 @@ namespace Lemonade_Stand_Proj
             {
                 Day day = new Day();
                 days.Add(day);
-                Console.WriteLine("Day " + (i) + " of " + (numberOfDays));
+                Console.WriteLine("Day: " + (i) + " of " + (numberOfDays));
                 weather.ConditionOfWeather();
                 weather.WeatherTemperature();
                 Console.ReadLine();
             }
+        }
+        public void DisplayMoney()
+        {
+            Console.WriteLine("Money: $ " + wallet.Money);
         }
     }
 }
