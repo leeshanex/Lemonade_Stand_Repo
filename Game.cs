@@ -13,6 +13,7 @@ namespace Lemonade_Stand_Proj
         Store store;
         Day day;
         Wallet wallet;
+        Inventory inventory;
         private Player player;
         private List<Day> days;
         private int currentDay;
@@ -26,6 +27,7 @@ namespace Lemonade_Stand_Proj
             player = new Player();
             days = new List<Day>();
             wallet = new Wallet();
+            inventory = new Inventory();
         }
 
         //member methods
@@ -45,11 +47,15 @@ namespace Lemonade_Stand_Proj
         {
             DisplayRules();
             StoreMenu();
+            //while() loop for each new day until day 7 and then calculate profit/loss
             DisplayMoney();
             AddDaysToList(currentDay, numberOfDays);
             SendPlayerToStore();
+            DisplayInventory();
+            Console.ReadLine();
 
-           
+
+
         }
         public void StoreMenu()
         {
@@ -68,8 +74,10 @@ namespace Lemonade_Stand_Proj
             store.SellSugarCubes(player);
             store.SellIceCubes(player);
         }
-
-       
+       public void DisplayInventory()
+        {
+            Console.WriteLine(inventory.lemons);
+        }
         public void AddDaysToList(int currentDay, int numberOfDays)
         {
             currentDay = 1;

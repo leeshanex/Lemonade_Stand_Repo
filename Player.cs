@@ -15,6 +15,7 @@ namespace Lemonade_Stand_Proj
         public Recipe recipe;
         public Pitcher pitcher;
         
+        
 
         //constructor
         public Player()
@@ -23,16 +24,18 @@ namespace Lemonade_Stand_Proj
             wallet = new Wallet();
             recipe = new Recipe();
             pitcher = new Pitcher();
+            
         }
 
         //member methods (Can Do)
-        public void MakeLemonade()
-        {
+        //    public void MakeLemonade()
+        ////    {
 
-        }
-        public void PurchaseIngredients()
-        {
+        ////    }
+        ////    public void PurchaseIngredients()
+        ////    {
 
-        }
+
+        ////    }
     }
 }
