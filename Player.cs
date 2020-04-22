@@ -28,14 +28,5 @@ namespace Lemonade_Stand_Proj
         }
 
         //member methods (Can Do)
-        //    public void MakeLemonade()
-        ////    {
-
-        ////    }
-        ////    public void PurchaseIngredients()
-        ////    {
-
-
-        ////    }
     }
 }

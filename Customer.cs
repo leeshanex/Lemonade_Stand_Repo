@@ -14,7 +14,7 @@ namespace Lemonade_Stand_Proj
         //constructor
         public Customer()
         {
-            names = new List<string>() { };
+            names = new List<string>();
         }
         //member methods
 

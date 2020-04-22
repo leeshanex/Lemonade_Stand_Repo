@@ -16,10 +16,13 @@ namespace Lemonade_Stand_Proj
         //constructor
         public Recipe()
         {
-            //amountOfLemons = 
+            pricePerCup = .25;
+            amountOfLemons = 4;
+            amountOfSugarCubes = 4;
+            amountOfIceCubes = 2;
         }
         
         //member methods
-        //default recipe ....
+        
     }
 }
