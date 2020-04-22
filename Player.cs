@@ -24,7 +24,6 @@ namespace Lemonade_Stand_Proj
             wallet = new Wallet();
             recipe = new Recipe();
             pitcher = new Pitcher();
-            
         }
 
         //member methods (Can Do)

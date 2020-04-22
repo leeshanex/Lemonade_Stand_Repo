@@ -21,7 +21,7 @@ namespace Lemonade_Stand_Proj
         public Wallet()
         {
             money = 20.00;
-            DisplayAmount();
+           
         }
 
         public void PayMoneyForItems(double transactionAmount)
@@ -30,7 +30,11 @@ namespace Lemonade_Stand_Proj
         }
         public void DisplayAmount()
         {
-            Console.WriteLine(money);
+            Console.WriteLine("Money: $" + money);
+        }
+        public void DisplayAmountLeft()
+        {
+            Console.WriteLine("Money left: $" + money);
         }
     }
 }

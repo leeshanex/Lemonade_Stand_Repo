@@ -31,12 +31,13 @@ namespace Lemonade_Stand_Proj
             DisplayRules();
             StoreMenu();
             //while() loop for each new day until day 7 and calculate profit/loss for each day
-            while (days.Count < numberOfDays)
+            while ((days.Count < numberOfDays) || player.wallet.Money < 0)
             {
-                
                 AddDaysToList();
+                player.wallet.DisplayAmount();
                 SendPlayerToStore();
             }
+            PlayerBankrupts();
            
             Console.ReadLine();
         }
@@ -56,7 +57,7 @@ namespace Lemonade_Stand_Proj
         {
             Console.WriteLine(" ____________________________");
             Console.WriteLine("|_________Store_Menu_________|");
-            Console.WriteLine("|Cups = $0.25 each            |");
+            Console.WriteLine("|Cups = $0.25 each           |");
             Console.WriteLine("|Lemons = $0.50 each         |");
             Console.WriteLine("|Sugar = $0.10 per sugar cube|");
             Console.WriteLine("|Ice = $0.01 per ice cube    |");
@@ -65,19 +66,31 @@ namespace Lemonade_Stand_Proj
         public void SendPlayerToStore()
         {
             store.SellCups(player);
+            player.wallet.DisplayAmountLeft();
             store.SellLemons(player);
+            player.wallet.DisplayAmountLeft();
             store.SellSugarCubes(player);
+            player.wallet.DisplayAmountLeft();
             store.SellIceCubes(player);
+            player.wallet.DisplayAmountLeft();
         }
 
         public void AddDaysToList()
         {
-                Day day = new Day("Day: " + currentDay++ + " of " + numberOfDays);
-                days.Add(day);
+            Console.WriteLine("_______________________________________");
+            Day day = new Day("|_____________Day: " + currentDay++ + " of " + numberOfDays + "_____________|");
+            days.Add(day);
         }
         public void AdjustRecipe()
         {
 
+        }
+        public void PlayerBankrupts()
+        {
+            if (player.wallet.Money < 0)
+            {
+                Console.WriteLine("You ran out of money, GAME OVER!");
+            }
         }
     }
 }
