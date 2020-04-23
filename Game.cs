@@ -77,6 +77,9 @@ namespace Lemonade_Stand_Proj
         public void SendPlayerToAdjustRecipe()
         {
             player.recipe.AdjustLemons(player);
+            player.recipe.AdjustIceCubes(player);
+            player.recipe.AdjustSugarCubes(player);
+            
         }
 
         public void AddDaysToList()
