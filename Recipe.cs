@@ -47,7 +47,7 @@ namespace Lemonade_Stand_Proj
             double itemsLeft = CalculateItemsUsed(sugarCubesPurchased, amountOfSugarCubes);
             Console.WriteLine("Sugar cubes left: " + itemsLeft);
         }
-        public void AdjustPricePerCup(Player player)
+        public void AdjustPricePerCup()
         {
             double userInput = UserInterface.AdjustPriceForCup("cups");
             double pricePerCup = SetPricePerCup(userInput);
