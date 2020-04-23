@@ -23,35 +23,66 @@ namespace Lemonade_Stand_Proj
             recipe = new Recipe();
             pitcher = new Pitcher();
             weather = new Weather();
+            CustomerChanceOfBuying();
         }
 
         //member methods (Can Do)
         public void CustomerChanceOfBuying()
         {
-            if (weather.condition == "Hot" && recipe.pricePerCup > 0)
+            Customer customer = new Customer();
+            foreach (string name in customer.names)
             {
-                MadeSale();
+                if (name == customer.names[0])
+                {
+
+                    if (weather.condition == "Hot" && recipe.pricePerCup > 0)
+                    {
+                        MadeSale();
+                    }
+                    else if (weather.condition == "Hazy" && (recipe.pricePerCup > 0 && recipe.pricePerCup < .75))
+                    {
+                        MadeSale();
+                    }
+                    else if (weather.condition == "Sunny" && (recipe.pricePerCup > 0 && recipe.pricePerCup < .65))
+                    {
+                        MadeSale();
+                    }
+                    else if (weather.condition == "Cloudy" && (recipe.pricePerCup > 0 && recipe.pricePerCup < .55))
+                    {
+                        MadeSale();
+                    }
+                    else if (weather.condition == "Rainy" && (recipe.pricePerCup > 0 && recipe.pricePerCup < .35))
+                    {
+                        MadeSale();
+                    }
+                }
+                else if (name == customer.names[1])
+                {
+
+                    if (weather.condition == "Hot" && recipe.pricePerCup > 0)
+                    {
+                        MadeSale();
+                    }
+                    else if (weather.condition == "Hazy" && (recipe.pricePerCup > 0 && recipe.pricePerCup < .75))
+                    {
+                        MadeSale();
+                    }
+                    else if (weather.condition == "Sunny" && (recipe.pricePerCup > 0 && recipe.pricePerCup < .65))
+                    {
+                        MadeSale();
+                    }
+                    else if (weather.condition == "Cloudy" && (recipe.pricePerCup > 0 && recipe.pricePerCup < .55))
+                    {
+                        MadeSale();
+                    }
+                    else if (weather.condition == "Rainy" && (recipe.pricePerCup > 0 && recipe.pricePerCup < .35))
+                    {
+                        MadeSale();
+                    }
+                }
             }
-            else if (weather.condition == "Hazy" && ( recipe.pricePerCup > 0 && recipe.pricePerCup < .75))
-            {
-                MadeSale();
-            }
-            else if (weather.condition == "Sunny" && (recipe.pricePerCup > 0 && recipe.pricePerCup < .65))
-            {
-                MadeSale();
-            }
-            else if (weather.condition == "Cloudy" && (recipe.pricePerCup > 0 && recipe.pricePerCup < .55))
-            {
-                MadeSale();
-            }
-            else if (weather.condition == "Rainy" && (recipe.pricePerCup > 0 && recipe.pricePerCup < .35))
-            {
-                MadeSale();
-            }
-            else
-            {
-                
-            }
+           
+
 
         }
         public void MadeSale()

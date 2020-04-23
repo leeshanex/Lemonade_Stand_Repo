@@ -9,7 +9,7 @@ namespace Lemonade_Stand_Proj
     class Customer
     {
         //member variables
-        private List<string> names;
+        public List<string> names;
         public string name;
    
         //constructor

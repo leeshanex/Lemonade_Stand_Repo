@@ -30,16 +30,17 @@ namespace Lemonade_Stand_Proj
         {
             DisplayRules();
             StoreMenu();
-            //while() loop for each new day until day 7 and calculate profit/loss for each day
             while ((days.Count < numberOfDays) || player.wallet.Money < 0)
             {
                 AddDaysToList();
                 player.wallet.DisplayAmount();
                 SendPlayerToStore();
-                SendPlayerToAdjustRecipe();
-                player.CustomerChanceOfBuying();
+                player = new Player();
+                //SendPlayerToAdjustRecipe();
+                //player.CustomerChanceOfBuying();
+                PlayerBankrupts();
             }
-            PlayerBankrupts();
+           
            
             Console.ReadLine();
         }
@@ -75,14 +76,14 @@ namespace Lemonade_Stand_Proj
             player.wallet.DisplayAmountLeft();
             store.SellIceCubes(player);
         }
-        public void SendPlayerToAdjustRecipe()
-        {
-            player.recipe.AdjustPricePerCup(player);
-            player.recipe.AdjustLemons(player);
-            player.recipe.AdjustSugarCubes(player);
-            player.recipe.AdjustIceCubes(player);
+        //public void SendPlayerToAdjustRecipe()
+        //{
+        //    player.recipe.adjustpricepercup();
+        //    player.recipe.adjustlemons(player);
+        //    player.recipe.adjustsugarcubes(player);
+        //    player.recipe.adjusticecubes(player);
             
-        }
+        //}
 
         public void AddDaysToList()
         {
@@ -92,7 +93,7 @@ namespace Lemonade_Stand_Proj
         }
         public void PlayerBankrupts()
         {
-            if (player.wallet.Money < 0)
+            if (player.wallet.Money <= 0)
             {
                 Console.WriteLine("You ran out of money, GAME OVER!");
             }
