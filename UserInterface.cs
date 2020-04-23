@@ -38,19 +38,19 @@ namespace Lemonade_Stand_Proj
             }
             return quantityOfItem;
         }
-            
-            public static int AdjustPriceForCup(string cupsPurchased)
+
+        public static double AdjustPriceForCup(string cupsPurchased)
         {
             bool userInputIsADouble = false;
-            decimal setPrice = -1;
+            double setPrice = -1;
             while (!userInputIsADouble || setPrice < 0)
             {
                 Console.WriteLine("-----------Price Adjustments----------");
                 Console.WriteLine("How much do you want to charge per " + cupsPurchased + " ?");
                 Console.WriteLine("Please enter a positive integer (or 0 to cancel):");
-                userInputIsADouble = decimal.TryParse(Console.ReadLine(), out setPrice);
+                userInputIsADouble = double.TryParse(Console.ReadLine(), out setPrice);
             }
-            return Convert.ToInt32(setPrice);
+            return setPrice;
         }
 
     }
