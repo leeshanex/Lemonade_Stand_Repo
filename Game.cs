@@ -37,6 +37,7 @@ namespace Lemonade_Stand_Proj
                 player.wallet.DisplayAmount();
                 SendPlayerToStore();
                 SendPlayerToAdjustRecipe();
+                player.CustomerChanceOfBuying();
             }
             PlayerBankrupts();
            

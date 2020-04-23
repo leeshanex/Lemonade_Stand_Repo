@@ -14,9 +14,7 @@ namespace Lemonade_Stand_Proj
         public string name;
         public Recipe recipe;
         public Pitcher pitcher;
-        
-        
-
+        public Weather weather;
         //constructor
         public Player()
         {
@@ -24,14 +22,16 @@ namespace Lemonade_Stand_Proj
             wallet = new Wallet();
             recipe = new Recipe();
             pitcher = new Pitcher();
+            weather = new Weather();
         }
 
         //member methods (Can Do)
-        public void CustomerChanceOfBuying(Weather weather)
+        public void CustomerChanceOfBuying()
         {
             if (weather.condition == "Hot" && recipe.pricePerCup > 0)
             {
                 MadeSale();
+               
             }
             else if (weather.condition == "Hazy" && ( recipe.pricePerCup > 0 && recipe.pricePerCup < .75))
             {
@@ -60,6 +60,7 @@ namespace Lemonade_Stand_Proj
             double lemonadeSold;
             lemonadeSold = inventory.cups.Count * recipe.pricePerCup;
             wallet.SoldACup(lemonadeSold);
+            Console.WriteLine("You made $" + lemonadeSold);
         }
     }
 }
