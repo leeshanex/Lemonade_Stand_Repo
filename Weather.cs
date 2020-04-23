@@ -10,7 +10,7 @@ namespace Lemonade_Stand_Proj
     {
         //member variables
         public int temperature;
-        private List<string> weatherConditions;
+        public List<string> weatherConditions;
         public string condition;
         Random random;
         //constructor
@@ -31,27 +31,27 @@ namespace Lemonade_Stand_Proj
         }
         public void WeatherTemperature()
         {
-            if (condition == "Hot")
+            if (condition == weatherConditions[4])
             {
                 temperature = random.Next(90, 100);
                 Console.WriteLine("Temp: " + temperature + "°F");
             }
-            else if (condition == "Hazy")
+            else if (condition == weatherConditions[2])
             {
                 temperature = random.Next(80, 89);
                 Console.WriteLine("Temp: " + temperature + "°F");
             }
-            else if (condition == "Sunny")
+            else if (condition == weatherConditions[0])
             {
                 temperature = random.Next(70, 79);
                 Console.WriteLine("Temp: " + temperature + "°F");
             }
-            else if (condition == "Cloudy")
+            else if (condition == weatherConditions[1])
             {
                 temperature = random.Next(60, 69);
                 Console.WriteLine("Temp: " + temperature + "°F");
             }
-            else if (condition == "Rainy")
+            else if (condition == weatherConditions[3])
             {
                 temperature = random.Next(50, 59);
                 Console.WriteLine("Temp: " + temperature + "°F");
