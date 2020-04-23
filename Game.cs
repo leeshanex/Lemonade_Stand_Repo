@@ -36,7 +36,7 @@ namespace Lemonade_Stand_Proj
                 AddDaysToList();
                 player.wallet.DisplayAmount();
                 SendPlayerToStore();
-                player.DisplayInventory();
+                SendPlayerToAdjustRecipe();
             }
             PlayerBankrupts();
            
@@ -74,16 +74,16 @@ namespace Lemonade_Stand_Proj
             player.wallet.DisplayAmountLeft();
             store.SellIceCubes(player);
         }
+        public void SendPlayerToAdjustRecipe()
+        {
+            player.recipe.AdjustLemons(player);
+        }
 
         public void AddDaysToList()
         {
             Console.WriteLine("_______________________________________");
             Day day = new Day("|_____________Day: " + currentDay++ + " of " + numberOfDays + "_____________|");
             days.Add(day);
-        }
-        public void AdjustRecipe()
-        {
-
         }
         public void PlayerBankrupts()
         {
