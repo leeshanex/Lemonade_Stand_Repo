@@ -18,12 +18,10 @@ namespace Lemonade_Stand_Proj
             this.dayName = dayName;
             Console.WriteLine(dayName);
             weather = new Weather();
-            customers = new List<Customer> { };
+            customers = new List<Customer>();
         }
         //member methods
-        public void ChanceOfBuying()
-        {
-
-        }
+        
+       
     }
 }

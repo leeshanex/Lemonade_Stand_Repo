@@ -21,12 +21,16 @@ namespace Lemonade_Stand_Proj
         public Wallet()
         {
             money = 20.00;
-           
+
         }
 
         public void PayMoneyForItems(double transactionAmount)
         {
             money -= transactionAmount;
+        }
+        public void SoldACup(double lemonadeSold)
+        {
+            money += lemonadeSold;
         }
         public void DisplayAmount()
         {

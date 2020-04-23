@@ -27,9 +27,39 @@ namespace Lemonade_Stand_Proj
         }
 
         //member methods (Can Do)
-        public void DisplayInventory()
+        public void CustomerChanceOfBuying(Weather weather)
         {
-            Console.WriteLine(inventory);
+            if (weather.condition == "Hot" && recipe.pricePerCup > 0)
+            {
+                MadeSale();
+            }
+            else if (weather.condition == "Hazy" && ( recipe.pricePerCup > 0 && recipe.pricePerCup < .75))
+            {
+                MadeSale();
+            }
+            else if (weather.condition == "Sunny" && (recipe.pricePerCup > 0 && recipe.pricePerCup < .65))
+            {
+                MadeSale();
+            }
+            else if (weather.condition == "Cloudy" && (recipe.pricePerCup > 0 && recipe.pricePerCup < .55))
+            {
+                MadeSale();
+            }
+            else if (weather.condition == "Rainy" && (recipe.pricePerCup > 0 && recipe.pricePerCup < .35))
+            {
+                MadeSale();
+            }
+            else
+            {
+                
+            }
+
+        }
+        public void MadeSale()
+        {
+            double lemonadeSold;
+            lemonadeSold = inventory.cups.Count * recipe.pricePerCup;
+            wallet.SoldACup(lemonadeSold);
         }
     }
 }
