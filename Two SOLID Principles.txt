@@ -1,0 +1,12 @@
+Two SOLID Principles in Lemonade Stand Game
+
+1) Single Responsibility Principle
+	-The Weather class functions as a single responsibility for producing weather conditions and temperatures. 
+The weather class can be implemented into the Day class to represent the weather for a single day. The weather
+conditions and temperatures changes as a new day is added.
+
+2)Liskov Substitution Principle
+	-The Item class in the project was the parent class to the following: Lemon.cs, SugarCube.cs, IceCube.cs, and Cup.cs. If
+the item class was removed the child class will still logically do the same. For instances, the logic in Item.cs is 
+"public string name;" while the Lemon.cs constructor consist of "name = "lemon";". If Item.cs was taken out Lemon.cs will 
+still logically be the same.

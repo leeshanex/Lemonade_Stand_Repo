@@ -31,7 +31,6 @@ namespace Lemonade_Stand_Proj
             if (weather.condition == "Hot" && recipe.pricePerCup > 0)
             {
                 MadeSale();
-               
             }
             else if (weather.condition == "Hazy" && ( recipe.pricePerCup > 0 && recipe.pricePerCup < .75))
             {
