@@ -41,16 +41,16 @@ namespace Lemonade_Stand_Proj
             
             public static int AdjustPriceForCup(string cupsPurchased)
         {
-            bool userInputIsAnInteger = false;
-            double setPrice = -1;
-            while (!userInputIsAnInteger || setPrice < 0)
+            bool userInputIsADouble = false;
+            decimal setPrice = -1;
+            while (!userInputIsADouble || setPrice < 0)
             {
                 Console.WriteLine("-----------Price Adjustments----------");
                 Console.WriteLine("How much do you want to charge per " + cupsPurchased + " ?");
                 Console.WriteLine("Please enter a positive integer (or 0 to cancel):");
-                userInputIsAnInteger = double.TryParse(Console.ReadLine(), out setPrice);
+                userInputIsADouble = decimal.TryParse(Console.ReadLine(), out setPrice);
             }
-            return setPrice;
+            return Convert.ToInt32(setPrice);
         }
 
     }

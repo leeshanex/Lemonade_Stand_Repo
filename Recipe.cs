@@ -49,12 +49,20 @@ namespace Lemonade_Stand_Proj
         }
         public void AdjustPricePerCup(Player player)
         {
+            double userInput = UserInterface.AdjustPriceForCup("cups");
+            double pricePerCup = SetPricePerCup(userInput);
+            Console.WriteLine("Price per cup set to " + pricePerCup + " each");
 
         }
         private double CalculateItemsUsed(int itemCount, int itemUsed)
         {
             int itemsLeft = itemCount - itemUsed;
             return itemsLeft;
+        }
+        private double SetPricePerCup(double setPrice)
+        {
+            double pricePerCup = setPrice;
+            return pricePerCup;
         }
     }
 }

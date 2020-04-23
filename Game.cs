@@ -76,9 +76,10 @@ namespace Lemonade_Stand_Proj
         }
         public void SendPlayerToAdjustRecipe()
         {
+            player.recipe.AdjustPricePerCup(player);
             player.recipe.AdjustLemons(player);
-            player.recipe.AdjustIceCubes(player);
             player.recipe.AdjustSugarCubes(player);
+            player.recipe.AdjustIceCubes(player);
             
         }
 
