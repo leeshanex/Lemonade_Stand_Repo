@@ -31,6 +31,7 @@ namespace Lemonade_Stand_Proj
             int quantityOfItem = -1;
             while (!userInputIsAnInteger || quantityOfItem < 0)
             {
+                Console.WriteLine("Adjustments");
                 Console.WriteLine("How many " + itemsPurchased + " would you like to use?");
                 Console.WriteLine("Please enter a positive integer (or 0 to cancel):");
                 userInputIsAnInteger = Int32.TryParse(Console.ReadLine(), out quantityOfItem);

@@ -24,18 +24,28 @@ namespace Lemonade_Stand_Proj
         //member methods
         public void AdjustLemons(Player player)
         {
-            int lemonsPurchased = UserInterface.AdjustRecipe("lemons");
+            int lemonsPurchased;
+            lemonsPurchased = player.inventory.lemons.Count;
+            int amountOfLemons = UserInterface.AdjustRecipe("lemons");
             double itemsLeft = CalculateItemsUsed(lemonsPurchased, amountOfLemons);
-            Console.WriteLine(itemsLeft);
-        
+            Console.WriteLine("Lemons left: " + itemsLeft);
+
         }
         public void AdjustIceCubes(Player player)
         {
-            int iceCubesPurchased = UserInterface.AdjustRecipe("ice cube");
+            int iceCubesPurchased;
+            iceCubesPurchased = player.inventory.iceCubes.Count;
+            int amountOfIce = UserInterface.AdjustRecipe("ice cube");
+            double itemsLeft = CalculateItemsUsed(iceCubesPurchased, amountOfIce);
+            Console.WriteLine("Ice cubes left: " + itemsLeft);
         }
         public void AdjustSugarCubes(Player player)
         {
-            int sugarCubesPurchased = UserInterface.AdjustRecipe("sugar cube");
+            int sugarCubesPurchased;
+            sugarCubesPurchased = player.inventory.sugarCubes.Count;
+            int amountOfSugarCubes = UserInterface.AdjustRecipe("sugar cube");
+            double itemsLeft = CalculateItemsUsed(sugarCubesPurchased, amountOfSugarCubes);
+            Console.WriteLine("Sugar cubes left: " + itemsLeft);
         }
         public void AdjustPricePerCup(Player player)
         {
