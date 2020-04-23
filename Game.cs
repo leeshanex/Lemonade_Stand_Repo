@@ -35,9 +35,8 @@ namespace Lemonade_Stand_Proj
                 AddDaysToList();
                 player.wallet.DisplayAmount();
                 SendPlayerToStore();
-                player = new Player();
+                player.CustomerChanceOfBuying();
                 //SendPlayerToAdjustRecipe();
-                //player.CustomerChanceOfBuying();
                 PlayerBankrupts();
             }
            
