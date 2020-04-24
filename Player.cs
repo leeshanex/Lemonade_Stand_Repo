@@ -14,6 +14,7 @@ namespace Lemonade_Stand_Proj
         public string name;
         public Recipe recipe;
         public Pitcher pitcher;
+        public Weather weather;
        
         //constructor
         public Player()
@@ -22,15 +23,16 @@ namespace Lemonade_Stand_Proj
             wallet = new Wallet();
             recipe = new Recipe();
             pitcher = new Pitcher();
+            weather = new Weather();
         }
 
         //member methods (Can Do)
         public void CustomerChanceOfBuying()
         {
             Customer customer = new Customer();
-            Weather weather = new Weather();
-            while (inventory.cups.Count < 0)
-            {
+            
+           
+            
                 foreach (string name in customer.names)
                 {
                     if (name == customer.names[0])
@@ -229,7 +231,7 @@ namespace Lemonade_Stand_Proj
                     {
                         Console.WriteLine("No sales made");
                     }
-                }
+                
             }
            
 

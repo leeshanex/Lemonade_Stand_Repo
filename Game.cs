@@ -30,13 +30,13 @@ namespace Lemonade_Stand_Proj
         {
             DisplayRules();
             StoreMenu();
-            while ((days.Count < numberOfDays) || player.wallet.Money < 0)
+            while ((days.Count < numberOfDays) || (player.wallet.Money <= 0))
             {
                 AddDaysToList();
                 player.wallet.DisplayAmount();
                 SendPlayerToStore();
+                SendPlayerToAdjustRecipe();
                 player.CustomerChanceOfBuying();
-                //SendPlayerToAdjustRecipe();
                 PlayerBankrupts();
             }
            
@@ -75,14 +75,14 @@ namespace Lemonade_Stand_Proj
             player.wallet.DisplayAmountLeft();
             store.SellIceCubes(player);
         }
-        //public void SendPlayerToAdjustRecipe()
-        //{
-        //    player.recipe.adjustpricepercup();
-        //    player.recipe.adjustlemons(player);
-        //    player.recipe.adjustsugarcubes(player);
-        //    player.recipe.adjusticecubes(player);
-            
-        //}
+        public void SendPlayerToAdjustRecipe()
+        {
+            player.recipe.AdjustPricePerCup();
+            player.recipe.AdjustLemons(player);
+            player.recipe.AdjustSugarCubes(player);
+            player.recipe.AdjustIceCubes(player);
+
+        }
 
         public void AddDaysToList()
         {
